@@ -7,6 +7,21 @@ public class Fibonacci {
           0,1,1,2,3,5,8,13
          */
 
+        int r = 7;
+        System.out.println("Fibonacci  numbers" + r + " using recursion:");
+        for (int i = 0; i <= r; i++) {
+            System.out.print(getFibonacci(i) + " "); }
+    }
+
+    public static int getFibonacci(int n) {
+        if (n == 0) { return 0; }
+
+        if (n == 1) { return 1; }
+
+        if (n == 2) { return 1; }
+
+        return getFibonacci(n - 1) + getFibonacci(n - 2);
+
 
     }
 }

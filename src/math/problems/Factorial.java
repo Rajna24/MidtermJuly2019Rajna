@@ -12,5 +12,24 @@ public class Factorial {
          *
          */
 
+        int num = 5;
+        System.out.println("Iteration : Factorial of " + num + " = " + factorialIteration(num));
+        System.out.println("Recursive : Factorial of " + num + " = " + factorialRecursive(num));
+
+    }
+
+    public static int factorialRecursive(int n) {
+        if (n == 0)
+            return 1;
+        else
+            return n * factorialRecursive(n-1);
+    }
+    public static int factorialIteration(int n) {
+        int result = 1;
+        for (int r = 1; r <= n; r++) {
+            result *= r;
+        }
+        return result;
+
     }
 }
